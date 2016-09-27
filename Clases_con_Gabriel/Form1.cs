@@ -22,33 +22,64 @@ namespace Clases_con_Gabriel
 
         public void Form1_Load(object sender, EventArgs e)
         {
-            var items = new ItemCombo[]
+           // var items = new ItemCombo[]
+           // {
+           //     new ItemCombo("1", "Ficohsa"),
+           //     new ItemCombo("2", "Movistar"),
+           //     new ItemCombo("3", "Kuiki")
+           // };
+           // cmbColectores.DataSource = items;
+           // cmbColectores.DisplayMember = "text";
+           // cmbColectores.ValueMember = "value";
+           // //var items = new ItemCombo[3];
+
+           // //items[0] = new ItemCombo("2", "Movistar");
+           // int h = 5;
+           // int g = 4;
+           // int m;
+
+           //// multiplicar_opcional(g,h);
+
+           // var valor = multiplicar_valor(h);
+           // var refer = multiplicar_ref(ref g);
+           // var refout = multiplicar_refout(out m, 8);
+
+           // MessageBox.Show(valor + ": " + h);
+           // MessageBox.Show(refer + ": " + g);
+           // MessageBox.Show(refout + ": " + m);
+
+           // eliminar(8, "2", "4", "89", "2");
+            /*IEnumerable: sirve para definir el comportamiento de una coleccion*/
+
+          /// IEnumerable<Factura> a = new Factura[10];
+            
+            //Factura[] a = new Factura[10];
+
+            //a[0] = new Factura();
+           
+            //Object[] r = new object[8];
+
+            //r[0] = "";
+            //r[1] = 8;
+            //r[2] = new Factura();
+
+            //List<Factura> L = new List<Factura>();
+
+            //L.Add(new Factura());
+            //L.AddRange(a);
+            //a[0] = new Factura();
+
+            FacturaCollection facturas = new FacturaCollection();
+
+            foreach (var item in facturas.GetList())
             {
-                new ItemCombo("1", "Ficohsa"),
-                new ItemCombo("2", "Movistar"),
-                new ItemCombo("3", "Kuiki")
-            };
-            cmbColectores.DataSource = items;
-            cmbColectores.DisplayMember = "text";
-            cmbColectores.ValueMember = "value";
-            //var items = new ItemCombo[3];
-
-            //items[0] = new ItemCombo("2", "Movistar");
-            int h = 5;
-            int g = 4;
-            int m;
-
-           // multiplicar_opcional(g,h);
-
-            var valor = multiplicar_valor(h);
-            var refer = multiplicar_ref(ref g);
-            var refout = multiplicar_refout(out m, 8);
-
-            MessageBox.Show(valor + ": " + h);
-            MessageBox.Show(refer + ": " + g);
-            MessageBox.Show(refout + ": " + m);
-
-            eliminar(8, "2", "4", "89", "2");
+                MessageBox.Show(item.IdFactura);
+            }
+            foreach (var item in facturas)
+            {
+                MessageBox.Show(item.IdFactura);
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
